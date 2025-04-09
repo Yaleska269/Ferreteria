@@ -9,42 +9,46 @@ package Modelo;
  * @author dell
  */
 public class DetallesCompras {
-        private int idDetallesCompras;
-        private Compras compras; // Relación con Compras
-        private Producto producto; // Relación con Producto
+        private int IdDetallesCompras;
+        private int IdCompras; // Relación con Compras
+        private int IdProducto; // Relación con Producto
         private int cantidad;
         private float precioUnitario;
 
-    public DetallesCompras(int idDetallesCompras, Compras compras, Producto producto, int cantidad, float precioUnitario) {
-        this.idDetallesCompras = idDetallesCompras;
-        this.compras = compras;
-        this.producto = producto;
+    public DetallesCompras() {
+    }
+
+        
+    public DetallesCompras(int IdDetallesCompras, int IdCompras, int IdProducto, int cantidad, float precioUnitario) {
+        this.IdDetallesCompras = IdDetallesCompras;
+        this.IdCompras = IdCompras;
+        this.IdProducto = IdProducto;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
     }
 
     public int getIdDetallesCompras() {
-        return idDetallesCompras;
+        return IdDetallesCompras;
     }
 
-    public void setIdDetallesCompras(int idDetallesCompras) {
-        this.idDetallesCompras = idDetallesCompras;
+    public void setIdDetallesCompras(int IdDetallesCompras) {
+        this.IdDetallesCompras = IdDetallesCompras;
     }
 
-    public Compras getCompras() {
-        return compras;
+    public int getIdCompras() {
+        return IdCompras;
     }
 
-    public void setCompras(Compras compras) {
-        this.compras = compras;
+    public void setIdCompras(int IdCompras) {
+        this.IdCompras = IdCompras;
     }
 
-    public Producto getProducto() {
-        return producto;
+    public int getIdProducto() {
+        return IdProducto;
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public int getCantidad() {
@@ -62,6 +66,6 @@ public class DetallesCompras {
     public void setPrecioUnitario(float precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
-        
-        
+
+   
 }

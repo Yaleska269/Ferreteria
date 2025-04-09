@@ -9,7 +9,7 @@ package Modelo;
  * @author dell
  */
 public class Cliente {
-    private int idCliente;
+    private int IdCliente;
 private String primerNombre;
 private String segundoNombre;
 private String primerApellido;
@@ -18,8 +18,12 @@ private String celular;
 private String direccion;
 private String cedula;
 
+    
+public Cliente() {
+    }
+
     public Cliente(int idCliente, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String celular, String direccion, String cedula) {
-        this.idCliente = idCliente;
+        this.IdCliente = idCliente;
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.primerApellido = primerApellido;
@@ -30,11 +34,11 @@ private String cedula;
     }
 
     public int getIdCliente() {
-        return idCliente;
+        return IdCliente;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdCliente(int IdCliente) {
+        this.IdCliente = IdCliente;
     }
 
     public String getPrimerNombre() {

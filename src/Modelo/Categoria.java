@@ -8,23 +8,24 @@ package Modelo;
  *
  * @author dell
  */
+
 public class Categoria {
-        private int idCategoria;
+        private int IdCategoria;
         private String nombreCategoria;
         private String descripcionCategoria;
 
     public Categoria(int idCategoria, String nombreCategoria, String descripcionCategoria) {
-        this.idCategoria = idCategoria;
+        this.IdCategoria = IdCategoria;
         this.nombreCategoria = nombreCategoria;
         this.descripcionCategoria = descripcionCategoria;
     }
 
     public int getIdCategoria() {
-        return idCategoria;
+        return IdCategoria;
     }
 
     public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+        this.IdCategoria = idCategoria;
     }
 
     public String getNombreCategoria() {
@@ -42,7 +43,11 @@ public class Categoria {
     public void setDescripcionCategoria(String descripcionCategoria) {
         this.descripcionCategoria = descripcionCategoria;
     }
-        
-        
-}
+
+    public Categoria() {
+    }
+
+   
+}     
+
 

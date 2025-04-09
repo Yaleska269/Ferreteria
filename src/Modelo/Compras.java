@@ -10,14 +10,18 @@ import java.util.List;
  * @author dell
  */
 public class Compras {
-        private int idCompra;
+        private int IdCompra;
         private Empleado empleado; // Relación con Empleado
         private Date fechaCompra;
         private float totalCompra;
         private List<DetallesCompras> detalles; // Relación con DetalleCompra
 
+    public Compras() {
+    }
+
+        
     public Compras(int idCompra, Empleado empleado, Date fechaCompra, float totalCompra, List<DetallesCompras> detalles) {
-        this.idCompra = idCompra;
+        this.IdCompra = IdCompra;
         this.empleado = empleado;
         this.fechaCompra = fechaCompra;
         this.totalCompra = totalCompra;
@@ -25,11 +29,11 @@ public class Compras {
     }
 
     public int getIdCompra() {
-        return idCompra;
+        return IdCompra;
     }
 
     public void setIdCompra(int idCompra) {
-        this.idCompra = idCompra;
+        this.IdCompra = idCompra;
     }
 
     public Empleado getEmpleado() {
@@ -62,6 +66,14 @@ public class Compras {
 
     public void setDetalles(List<DetallesCompras> detalles) {
         this.detalles = detalles;
+    }
+
+    public void setIdEmpleado(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getIdEmpleado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
         
       

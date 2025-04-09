@@ -10,15 +10,15 @@ import java.util.List;
  * @author dell
  */
 public class Venta {
-        private int idVenta;
+        private int IdVenta;
         private Cliente cliente; // Relación con Cliente
         private Empleado empleado; // Relación con Empleado
         private Date fechaVenta;
         private float totalVenta;
         private List<DetallesVentas> detalles; // Relación con DetalleVenta
 
-    public Venta(int idVenta, Cliente cliente, Empleado empleado, Date fechaVenta, float totalVenta, List<DetallesVentas> detalles) {
-        this.idVenta = idVenta;
+    public Venta(int IdVenta, Cliente cliente, Empleado empleado, Date fechaVenta, float totalVenta, List<DetallesVentas> detalles) {
+        this.IdVenta = IdVenta;
         this.cliente = cliente;
         this.empleado = empleado;
         this.fechaVenta = fechaVenta;
@@ -26,12 +26,16 @@ public class Venta {
         this.detalles = detalles;
     }
 
+    public Venta() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getIdVenta() {
-        return idVenta;
+        return IdVenta;
     }
 
     public void setIdVenta(int idVenta) {
-        this.idVenta = idVenta;
+        this.IdVenta = idVenta;
     }
 
     public Cliente getCliente() {
@@ -72,6 +76,22 @@ public class Venta {
 
     public void setDetalles(List<DetallesVentas> detalles) {
         this.detalles = detalles;
+    }
+
+    public void setIdCliente(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setIdEmpleado(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getIdCliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getIdEmpleado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
         
         

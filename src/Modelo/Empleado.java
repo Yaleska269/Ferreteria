@@ -6,10 +6,10 @@ package Modelo;
 import java.util.Date;
 /**
  *
- * @author dell
+ * @author YALESKA
  */
 public class Empleado {
-    private int idEmpleado;
+    private int IdEmpleado;
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
@@ -18,8 +18,12 @@ public class Empleado {
     private String cargo;
     private Date fechaContratacion;
 
+    public Empleado() {
+    }
+
+    
     public Empleado(int idEmpleado, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String celular, String cargo, Date fechaContratacion) {
-        this.idEmpleado = idEmpleado;
+        this.IdEmpleado = idEmpleado;
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.primerApellido = primerApellido;
@@ -30,11 +34,11 @@ public class Empleado {
     }
 
     public int getIdEmpleado() {
-        return idEmpleado;
+        return IdEmpleado;
     }
 
     public void setIdEmpleado(int idEmpleado) {
-        this.idEmpleado = idEmpleado;
+        this.IdEmpleado = idEmpleado;
     }
 
     public String getPrimerNombre() {

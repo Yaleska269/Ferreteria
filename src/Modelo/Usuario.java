@@ -9,22 +9,26 @@ package Modelo;
  * @author dell
  */
 public class Usuario {
-    private int idUsuario;
+    private int IdUsuario;
     private String usuario;
     private String contrasena;
 
-    public Usuario(int idUsuario, String usuario, String contrasena) {
-        this.idUsuario = idUsuario;
+    public Usuario(int IdUsuario, String usuario, String contrasena) {
+        this.IdUsuario = IdUsuario;
         this.usuario = usuario;
         this.contrasena = contrasena;
     }
 
+    public Usuario() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getIdUsuario() {
-        return idUsuario;
+        return IdUsuario;
     }
 
     public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+        this.IdUsuario = idUsuario;
     }
 
     public String getUsuario() {

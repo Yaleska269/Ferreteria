@@ -9,42 +9,37 @@ package Modelo;
  * @author yaleskaSevilla
  */
 public class DetallesVentas {
-        private int idDetalleVenta;
-        private Venta venta; // Relación con Venta
-        private Producto producto; // Relación con Producto
+        private int IdDetalleVenta;
+        private int Idventa; // Relación con Venta
+        private int IdProducto; // Relación con Producto
         private int cantidad;
         private float precioUnitario;
 
-    public DetallesVentas(int idDetalleVenta, Venta venta, Producto producto, int cantidad, float precioUnitario) {
-        this.idDetalleVenta = idDetalleVenta;
-        this.venta = venta;
-        this.producto = producto;
-        this.cantidad = cantidad;
-        this.precioUnitario = precioUnitario;
+    public DetallesVentas() {
     }
 
     public int getIdDetalleVenta() {
-        return idDetalleVenta;
+        return IdDetalleVenta;
     }
 
-    public void setIdDetalleVenta(int idDetalleVenta) {
-        this.idDetalleVenta = idDetalleVenta;
+    public void setIdDetalleVenta(int IdDetalleVenta) {
+        this.IdDetalleVenta = IdDetalleVenta;
     }
 
-    public Venta getVenta() {
-        return venta;
+    public int getIdventa() {
+        return Idventa;
     }
 
-    public void setVenta(Venta venta) {
-        this.venta = venta;
+    public void setIdventa(int Idventa) {
+        this.Idventa = Idventa;
     }
 
-    public Producto getProducto() {
-        return producto;
+    public int getIdProducto() {
+        return IdProducto;
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public int getCantidad() {
@@ -62,7 +57,5 @@ public class DetallesVentas {
     public void setPrecioUnitario(float precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
-        
-      
-        }
 
+}

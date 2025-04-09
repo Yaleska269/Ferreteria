@@ -9,7 +9,7 @@ package Modelo;
  * @author dell
  */
 public class Producto {
-    private int idProducto;
+    private int IdProducto;
     private String nombreProducto;
     private String descripcionProducto;
     private Categoria categoria; // Relación con Categoria
@@ -17,8 +17,8 @@ public class Producto {
     private int stock;
     private String imagen;
 
-    public Producto(int idProducto, String nombreProducto, String descripcionProducto, Categoria categoria, float precioUnitario, int stock, String imagen) {
-        this.idProducto = idProducto;
+    public Producto(int IdProducto, String nombreProducto, String descripcionProducto, Categoria categoria, float precioUnitario, int stock, String imagen) {
+        this.IdProducto = IdProducto;
         this.nombreProducto = nombreProducto;
         this.descripcionProducto = descripcionProducto;
         this.categoria = categoria;
@@ -27,12 +27,16 @@ public class Producto {
         this.imagen = imagen;
     }
 
+    public Producto() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getIdProducto() {
-        return idProducto;
+        return IdProducto;
     }
 
     public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
+        this.IdProducto = idProducto;
     }
 
     public String getNombreProducto() {
@@ -81,6 +85,14 @@ public class Producto {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+
+    public void setIdCategoria(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getIdCategoria() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
