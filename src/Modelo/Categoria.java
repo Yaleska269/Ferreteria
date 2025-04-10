@@ -14,6 +14,10 @@ public class Categoria {
         private String nombreCategoria;
         private String descripcionCategoria;
 
+    public Categoria() {
+    }
+
+        
     public Categoria(int idCategoria, String nombreCategoria, String descripcionCategoria) {
         this.IdCategoria = IdCategoria;
         this.nombreCategoria = nombreCategoria;
@@ -42,9 +46,6 @@ public class Categoria {
 
     public void setDescripcionCategoria(String descripcionCategoria) {
         this.descripcionCategoria = descripcionCategoria;
-    }
-
-    public Categoria() {
     }
 
    

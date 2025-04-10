@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
+
 import Modelo.Compras;
 import Util.ConexionBD;
 import java.sql.Connection;
@@ -12,39 +13,38 @@ import java.util.Date;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  *
  * @author YALESKA
  */
 public class ComprasDAO {
-  
-   public void crearCompras(Compras compras) throws SQLException {
-    String sql = """
+
+    public void crearCompras(Compras compras) throws SQLException {
+        String sql = """
         INSERT INTO Compras (
             id_empleado, 
             fecha_compra, 
             total_compra
         ) VALUES (?, ?, ?)""";
-    
-    try (Connection c = ConexionBD.getConnection();
-         PreparedStatement stmt = c.prepareStatement(sql)) {
-        stmt.setInt(1, compras.getIdEmpleado());
-        stmt.setDate(2, new java.sql.Date(compras.getFechaCompra().getTime()));
-        stmt.setFloat(3, compras.getTotalCompra());
-        stmt.executeUpdate();
+
+        try (Connection c = ConexionBD.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, compras.getEmpleado());
+            stmt.setDate(2, new java.sql.Date(compras.getFechaCompra().getTime()));
+            stmt.setFloat(3, compras.getTotalCompra());
+            stmt.executeUpdate();
+        }
     }
-}
-public List<Compras> leerTodasCompras() throws SQLException {
+
+    public List<Compras> leerTodasCompras() throws SQLException {
         String sql = "SELECT * FROM Compras";
         List<Compras> compras = new ArrayList<>();
 
-        try (Connection c = ConexionBD.getConnection();
-             PreparedStatement stmt = c.prepareStatement(sql);
-             ResultSet rs = stmt.executeQuery()) {
+        try (Connection c = ConexionBD.getConnection(); PreparedStatement stmt = c.prepareStatement(sql); ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 Compras compra = new Compras();
                 compra.setIdCompra(rs.getInt("id_compra"));
-                compra.setIdEmpleado(rs.getInt("id_empleado"));
+                compra.setEmpleado(rs.getInt("id_empleado"));
                 compra.setFechaCompra(rs.getDate("fecha_compra"));
                 compra.setTotalCompra(rs.getFloat("total_compra"));
                 compras.add(compra);
@@ -53,25 +53,44 @@ public List<Compras> leerTodasCompras() throws SQLException {
         return compras;
     }
 
+    public void actualizarCompra(Compras compra) throws SQLException {
+        String sql = "UPDATE Compras SET id_empleado = ?, fecha_compra = ?, total_compra = ? WHERE id_compra = ?";
+
+        try (Connection c = ConexionBD.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, compra.getEmpleado());
+            stmt.setDate(2, new java.sql.Date(compra.getFechaCompra().getTime()));
+            stmt.setFloat(3, compra.getTotalCompra());
+            stmt.setInt(4, compra.getIdCompra());
+            stmt.executeUpdate();
+        }
+    }
+
+// Método Main
     public static void main(String[] args) {
         try {
             ComprasDAO dao = new ComprasDAO();
+
+            // Actualizar una compra
+            Compras compra = new Compras();
+            compra.setIdCompra(1); // ID existente
+            compra.setEmpleado(2);
+            compra.setFechaCompra(new java.util.Date());
+            compra.setTotalCompra(1500.50f);
+            dao.actualizarCompra(compra);
+            System.out.println("Compra actualizada.");
+
+            // Leer y mostrar todas las compras para verificar
             List<Compras> compras = dao.leerTodasCompras();
             System.out.println("Lista de compras:");
             for (Compras comp : compras) {
-                System.out.println("ID: " + comp.getIdCompra() + 
-                                 ", Empleado ID: " + comp.getIdEmpleado() + 
-                                 ", Fecha: " + comp.getFechaCompra() + 
-                                 ", Total: " + comp.getTotalCompra());
+                System.out.println("ID: " + comp.getIdCompra()
+                        + ", Empleado ID: " + comp.getEmpleado()
+                        + ", Fecha: " + comp.getFechaCompra()
+                        + ", Total: " + comp.getTotalCompra());
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }
     }
+
 }
-
-
-
-
-
-

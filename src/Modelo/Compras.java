@@ -3,26 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Modelo;
+
 import java.util.Date;
 import java.util.List;
+
 /**
  *
  * @author dell
  */
 public class Compras {
-        private int IdCompra;
-        private Empleado empleado; // Relación con Empleado
-        private Date fechaCompra;
-        private float totalCompra;
-        private List<DetallesCompras> detalles; // Relación con DetalleCompra
+
+    private int IdCompra;
+    private int Empleado; // Relación con Empleado
+    private Date fechaCompra;
+    private float totalCompra;
+    private List<DetallesCompras> detalles; // Relación con DetalleCompra
 
     public Compras() {
     }
 
-        
-    public Compras(int idCompra, Empleado empleado, Date fechaCompra, float totalCompra, List<DetallesCompras> detalles) {
+    public Compras(int IdCompra, int empleado, Date fechaCompra, float totalCompra, List<DetallesCompras> detalles) {
         this.IdCompra = IdCompra;
-        this.empleado = empleado;
+        this.Empleado = empleado;
         this.fechaCompra = fechaCompra;
         this.totalCompra = totalCompra;
         this.detalles = detalles;
@@ -32,16 +34,16 @@ public class Compras {
         return IdCompra;
     }
 
-    public void setIdCompra(int idCompra) {
-        this.IdCompra = idCompra;
+    public void setIdCompra(int IdCompra) {
+        this.IdCompra = IdCompra;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public int getEmpleado() {
+        return Empleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setEmpleado(int empleado) {
+        this.Empleado = empleado;
     }
 
     public Date getFechaCompra() {
@@ -68,15 +70,6 @@ public class Compras {
         this.detalles = detalles;
     }
 
-    public void setIdEmpleado(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getIdEmpleado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-        
-      
-        }
-
-
+    
+    
+}

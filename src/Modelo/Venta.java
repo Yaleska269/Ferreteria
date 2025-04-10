@@ -11,47 +11,46 @@ import java.util.List;
  */
 public class Venta {
         private int IdVenta;
-        private Cliente cliente; // Relación con Cliente
-        private Empleado empleado; // Relación con Empleado
+        private int Idcliente; // Relación con Cliente
+        private int Idempleado; // Relación con Empleado
         private Date fechaVenta;
         private float totalVenta;
         private List<DetallesVentas> detalles; // Relación con DetalleVenta
 
-    public Venta(int IdVenta, Cliente cliente, Empleado empleado, Date fechaVenta, float totalVenta, List<DetallesVentas> detalles) {
+    public Venta() {
+    }
+
+    public Venta(int IdVenta, int Idcliente, int Idempleado, Date fechaVenta, float totalVenta, List<DetallesVentas> detalles) {
         this.IdVenta = IdVenta;
-        this.cliente = cliente;
-        this.empleado = empleado;
+        this.Idcliente = Idcliente;
+        this.Idempleado = Idempleado;
         this.fechaVenta = fechaVenta;
         this.totalVenta = totalVenta;
         this.detalles = detalles;
-    }
-
-    public Venta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdVenta() {
         return IdVenta;
     }
 
-    public void setIdVenta(int idVenta) {
-        this.IdVenta = idVenta;
+    public void setIdVenta(int IdVenta) {
+        this.IdVenta = IdVenta;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getIdcliente() {
+        return Idcliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setIdcliente(int Idcliente) {
+        this.Idcliente = Idcliente;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public int getIdempleado() {
+        return Idempleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setIdempleado(int Idempleado) {
+        this.Idempleado = Idempleado;
     }
 
     public Date getFechaVenta() {
@@ -78,21 +77,6 @@ public class Venta {
         this.detalles = detalles;
     }
 
-    public void setIdCliente(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setIdEmpleado(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getIdCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getIdEmpleado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
         
-        
-        }
+}

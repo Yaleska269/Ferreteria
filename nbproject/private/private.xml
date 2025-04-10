@@ -4,24 +4,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/CategoriaDAO.java</file>
+            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Categoria.java</file>
+            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Cliente.java</file>
+            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Compras.java</file>
+            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/DetallesCompras.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/ClienteDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/ComprasDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/DetallesComprasDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/DetallesVentasDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/EmpleadoDAO.java</file>
+            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Empleado.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/ProductoDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/UsuarioDAO.java</file>
             <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/VentaDAO.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Util/ConexionBD.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Categoria.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/DetallesCompras.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Compras.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/DetallesVentas.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Producto.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Empleado.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Usuario.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Venta.java</file>
-            <file>file:/C:/Users/dell/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Cliente.java</file>
         </group>
     </open-files>
 </project-private>
