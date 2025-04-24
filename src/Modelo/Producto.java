@@ -12,31 +12,30 @@ public class Producto {
     private int IdProducto;
     private String nombreProducto;
     private String descripcionProducto;
-    private Categoria categoria; // Relación con Categoria
+    private int IdCategoria; // Relación con Categoria
     private float precioUnitario;
     private int stock;
     private String imagen;
 
-    public Producto(int IdProducto, String nombreProducto, String descripcionProducto, Categoria categoria, float precioUnitario, int stock, String imagen) {
+    public Producto() {
+    }
+
+    public Producto(int IdProducto, String nombreProducto, String descripcionProducto, int IdCategoria, float precioUnitario, int stock, String imagen) {
         this.IdProducto = IdProducto;
         this.nombreProducto = nombreProducto;
         this.descripcionProducto = descripcionProducto;
-        this.categoria = categoria;
+        this.IdCategoria = IdCategoria;
         this.precioUnitario = precioUnitario;
         this.stock = stock;
         this.imagen = imagen;
-    }
-
-    public Producto() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdProducto() {
         return IdProducto;
     }
 
-    public void setIdProducto(int idProducto) {
-        this.IdProducto = idProducto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public String getNombreProducto() {
@@ -55,12 +54,12 @@ public class Producto {
         this.descripcionProducto = descripcionProducto;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public int getIdCategoria() {
+        return IdCategoria;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setIdCategoria(int IdCategoria) {
+        this.IdCategoria = IdCategoria;
     }
 
     public float getPrecioUnitario() {
@@ -87,14 +86,8 @@ public class Producto {
         this.imagen = imagen;
     }
 
-    public void setIdCategoria(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getIdCategoria() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
     
-    }
+}
 
+   

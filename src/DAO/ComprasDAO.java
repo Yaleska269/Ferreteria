@@ -13,30 +13,38 @@ import java.util.Date;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.sql.Statement;
 /**
  *
  * @author YALESKA
  */
 public class ComprasDAO {
 
-    public void crearCompras(Compras compras) throws SQLException {
+    public int crearCompra(Compras compra) throws SQLException {
         String sql = """
         INSERT INTO Compras (
             id_empleado, 
             fecha_compra, 
             total_compra
         ) VALUES (?, ?, ?)""";
+        int generatedId = -1;
 
-        try (Connection c = ConexionBD.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
-            stmt.setInt(1, compras.getEmpleado());
-            stmt.setDate(2, new java.sql.Date(compras.getFechaCompra().getTime()));
-            stmt.setFloat(3, compras.getTotalCompra());
+        try (Connection c = ConexionBD.getConnection(); PreparedStatement stmt = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            stmt.setInt(1, compra.getEmpleado());
+            stmt.setDate(2, new java.sql.Date(compra.getFechaCompra().getTime()));
+            stmt.setFloat(3, compra.getTotalCompra());
             stmt.executeUpdate();
-        }
-    }
 
-    public List<Compras> leerTodasCompras() throws SQLException {
+            // Obtener el ID generado
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    generatedId = rs.getInt(1);
+                }
+            }
+        }
+        return generatedId;
+    }
+public List<Compras> leerTodasCompras() throws SQLException {
         String sql = "SELECT * FROM Compras";
         List<Compras> compras = new ArrayList<>();
 
@@ -64,6 +72,18 @@ public class ComprasDAO {
             stmt.executeUpdate();
         }
     }
+        // Método para eliminar una compra
+    public void eliminarCompra(int idCompras) throws SQLException {
+        String sql = "DELETE FROM Compras WHERE id_compra = ?";
+
+        try (Connection c = ConexionBD.getConnection();
+             PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, idCompras);
+            stmt.executeUpdate();
+        }
+    }
+
+    
 
 // Método Main
     public static void main(String[] args) {
@@ -92,5 +112,7 @@ public class ComprasDAO {
             System.err.println("Error: " + e.getMessage());
         }
     }
-
 }
+
+
+
