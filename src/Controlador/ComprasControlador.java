@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author dell
+ * @author yaleska Sevilla
  */
 public class ComprasControlador {
     
